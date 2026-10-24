@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 
 struct RepositorySource: Identifiable, Codable, Hashable {
     let id: UUID
@@ -77,6 +78,47 @@ struct RepositoryPayload: Decodable {
     }
 }
 
+enum AppCategory: String, CaseIterable, Identifiable, Hashable {
+    case all, tools, games, media, social
+
+    var id: String { rawValue }
+
+    var title: LocalizedStringKey {
+        switch self {
+        case .all: return "All"
+        case .tools: return "Tools"
+        case .games: return "Games"
+        case .media: return "Media"
+        case .social: return "Social"
+        }
+    }
+
+    var systemImage: String {
+        switch self {
+        case .all: return "square.stack.3d.up.fill"
+        case .tools: return "wrench.and.screwdriver.fill"
+        case .games: return "gamecontroller.fill"
+        case .media: return "film.fill"
+        case .social: return "bubble.left.and.bubble.right.fill"
+        }
+    }
+
+    private static let socialKeys = ["instagram", "facebook", "messenger", "whatsapp", "telegra", "tweetie", "twitter", "snap", "picaboo", "reddit", "discord", "barcelona", "threads", "tellm", "jodel", "fun.ask", "nicegram", "turrit", "swiftgram", "teledark", "signal", "viber", "wechat", "linkedin", "pinterest", "tumblr", "bereal", "line.", "social", "messag", "chat"]
+    private static let mediaKeys = ["youtube", "musically", "tiktok", "twitch", "music", "spotify", "netflix", "video", "movie", "stream", "podcast", "photo", "camera", "entertain", "media", "player"]
+
+    /// Sorts an app into one of the browse tabs from whatever the source tells us.
+    static func classify(category: String?, bundleIdentifier: String, name: String) -> AppCategory {
+        let cat = (category ?? "").lowercased()
+        if cat.contains("game") || cat.contains("emulat") { return .games }
+        let haystack = (bundleIdentifier + " " + name).lowercased()
+        if socialKeys.contains(where: { haystack.contains($0) }) { return .social }
+        if mediaKeys.contains(where: { haystack.contains($0) }) { return .media }
+        if cat.contains("social") || cat.contains("messag") { return .social }
+        if cat.contains("entertain") || cat.contains("video") || cat.contains("music") || cat.contains("photo") { return .media }
+        return .tools
+    }
+}
+
 struct RepositoryApp: Decodable, Identifiable, Hashable {
     let name: String
     let bundleIdentifier: String
@@ -85,8 +127,10 @@ struct RepositoryApp: Decodable, Identifiable, Hashable {
     let localizedDescription: String?
     let iconURL: URL?
     let versions: [RepositoryAppVersion]
+    let category: String?
+    let kind: AppCategory
 
-    var id: String { bundleIdentifier + (versions.first?.version ?? name) }
+    var id: String { bundleIdentifier + "|" + name + "|" + (versions.first?.version ?? "") }
 
     var latest: RepositoryAppVersion? { versions.first }
 
@@ -95,6 +139,7 @@ struct RepositoryApp: Decodable, Identifiable, Hashable {
         case iconURL, icon, versions, version, downloadURL, size, versionDate
         case minOSVersion, versionDescription, absoluteVersion
         case image, imageURL, logo, iconUrl, iconurl
+        case category, type
     }
 
     private static func lenientURL(_ container: KeyedDecodingContainer<CodingKeys>, _ keys: [CodingKeys]) -> URL? {
@@ -119,6 +164,10 @@ struct RepositoryApp: Decodable, Identifiable, Hashable {
         subtitle = try? container.decodeIfPresent(String.self, forKey: .subtitle)
         localizedDescription = try? container.decodeIfPresent(String.self, forKey: .localizedDescription)
         iconURL = Self.lenientURL(container, [.iconURL, .icon, .iconUrl, .iconurl, .imageURL, .image, .logo])
+        let rawCategory = (try? container.decodeIfPresent(String.self, forKey: .category))
+            ?? (try? container.decodeIfPresent(String.self, forKey: .type))
+        category = rawCategory ?? nil
+        kind = AppCategory.classify(category: category, bundleIdentifier: bundleIdentifier, name: name)
 
         if let parsed = try? container.decode([RepositoryAppVersion].self, forKey: .versions), !parsed.isEmpty {
             versions = parsed

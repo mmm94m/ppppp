@@ -21,7 +21,33 @@ final class SourceStore: ObservableObject {
     private init() {
         sources = load()
         ensureDefaultSource()
-        Task { await refreshAll() }
+        Task {
+            await loadCachedCatalogs()
+            await refreshAll()
+        }
+    }
+
+    private static var cacheDirectory: URL {
+        let base = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
+        let dir = base.appendingPathComponent("AshteMobileSources", isDirectory: true)
+        try? FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
+        return dir
+    }
+
+    private func cacheURL(for id: UUID) -> URL {
+        Self.cacheDirectory.appendingPathComponent("\(id.uuidString).json")
+    }
+
+    /// Shows the last known apps instantly while fresh data loads in the background.
+    private func loadCachedCatalogs() async {
+        let current = await MainActor.run { self.sources }
+        for source in current {
+            guard let data = try? Data(contentsOf: cacheURL(for: source.id)),
+                  let payload = try? RepositoryService.decode(data) else { continue }
+            await MainActor.run {
+                if catalog[source.id] == nil { catalog[source.id] = payload.apps }
+            }
+        }
     }
 
     /// Makes sure the Ashte source is in the list, unless the user deliberately removed it.
@@ -77,6 +103,7 @@ final class SourceStore: ObservableObject {
             sources.removeAll { $0.id == source.id }
         }
         catalog.removeValue(forKey: source.id)
+        try? FileManager.default.removeItem(at: cacheURL(for: source.id))
         persist()
     }
 
@@ -96,7 +123,11 @@ final class SourceStore: ObservableObject {
             loading.insert(source.id)
             failed.remove(source.id)
         }
-        let payload = try? await RepositoryService.fetch(url: source.url)
+        let data = try? await RepositoryService.fetchData(url: source.url)
+        let payload = data.flatMap { try? RepositoryService.decode($0) }
+        if let data, payload != nil {
+            try? data.write(to: cacheURL(for: source.id), options: .atomic)
+        }
         await MainActor.run {
             loading.remove(source.id)
             guard let payload else {

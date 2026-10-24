@@ -1,5 +1,6 @@
 import SwiftUI
 import UIKit
+import ImageIO
 
 final class RemoteImageCache {
     static let shared = RemoteImageCache()
@@ -7,6 +8,35 @@ final class RemoteImageCache {
 
     func image(for url: URL) -> UIImage? { cache.object(forKey: url as NSURL) }
     func store(_ image: UIImage, for url: URL) { cache.setObject(image, forKey: url as NSURL) }
+}
+
+enum RemoteImageLoader {
+    static let session: URLSession = {
+        let config = URLSessionConfiguration.default
+        config.urlCache = URLCache(memoryCapacity: 64 * 1024 * 1024, diskCapacity: 300 * 1024 * 1024)
+        config.requestCachePolicy = .returnCacheDataElseLoad
+        config.httpMaximumConnectionsPerHost = 12
+        config.timeoutIntervalForRequest = 30
+        return URLSession(configuration: config)
+    }()
+
+    /// Downloads and downsamples off the main thread, so long lists stay smooth.
+    static func loadIcon(from url: URL, maxPixel: CGFloat = 256) async -> UIImage? {
+        if let cached = RemoteImageCache.shared.image(for: url) { return cached }
+        guard let (data, _) = try? await session.data(from: url) else { return nil }
+        let sourceOptions: [CFString: Any] = [kCGImageSourceShouldCache: false]
+        guard let source = CGImageSourceCreateWithData(data as CFData, sourceOptions as CFDictionary) else { return nil }
+        let thumbOptions: [CFString: Any] = [
+            kCGImageSourceCreateThumbnailFromImageAlways: true,
+            kCGImageSourceShouldCacheImmediately: true,
+            kCGImageSourceCreateThumbnailWithTransform: true,
+            kCGImageSourceThumbnailMaxPixelSize: maxPixel
+        ]
+        guard let cgImage = CGImageSourceCreateThumbnailAtIndex(source, 0, thumbOptions as CFDictionary) else { return nil }
+        let image = UIImage(cgImage: cgImage)
+        RemoteImageCache.shared.store(image, for: url)
+        return image
+    }
 }
 
 /// App icon loaded from the network, cached in memory, with a tidy lettered fallback.
@@ -19,8 +49,8 @@ struct RemoteIcon: View {
 
     var body: some View {
         ZStack {
-            if let image {
-                Image(uiImage: image).resizable().scaledToFill()
+            if let shown = image ?? url.flatMap({ RemoteImageCache.shared.image(for: $0) }) {
+                Image(uiImage: shown).resizable().scaledToFill()
             } else {
                 placeholder
             }
@@ -53,13 +83,9 @@ struct RemoteIcon: View {
             image = cached
             return
         }
-        var request = URLRequest(url: url)
-        request.cachePolicy = .returnCacheDataElseLoad
-        request.timeoutInterval = 30
-        guard let (data, _) = try? await URLSession.shared.data(for: request),
-              let loaded = UIImage(data: data) else { return }
-        RemoteImageCache.shared.store(loaded, for: url)
-        image = loaded
+        if let loaded = await RemoteImageLoader.loadIcon(from: url) {
+            image = loaded
+        }
     }
 }
 
