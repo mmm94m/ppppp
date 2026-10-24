@@ -1,0 +1,3296 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "About": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Über"
+          }
+        }
+      }
+    },
+    "Add": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hinzufügen"
+          }
+        }
+      }
+    },
+    "Add Certificate": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zertifikat hinzufügen"
+          }
+        }
+      }
+    },
+    "Add Source": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quelle hinzufügen"
+          }
+        }
+      }
+    },
+    "Add a certificate in Settings first.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Füge zuerst in den Einstellungen ein Zertifikat hinzu."
+          }
+        }
+      }
+    },
+    "Add a certificate in the Certificates tab first.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Füge zuerst im Tab „Zertifikate“ ein Zertifikat hinzu."
+          }
+        }
+      }
+    },
+    "Add an AltStore or ESign-compatible repo URL to browse and sign apps straight from it.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Füge eine AltStore- oder ESign-kompatible Repo-URL hinzu, um Apps direkt daraus zu laden und zu signieren."
+          }
+        }
+      }
+    },
+    "Advanced": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erweitert"
+          }
+        }
+      }
+    },
+    "Allow Arbitrary Network Loads": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beliebige Netzwerkverbindungen erlauben"
+          }
+        }
+      }
+    },
+    "App": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App"
+          }
+        }
+      }
+    },
+    "App extensions and plug-ins increase signing time and can fail on some certificates.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App-Erweiterungen und Plug-ins verlängern die Signierzeit und können bei manchen Zertifikaten fehlschlagen."
+          }
+        }
+      }
+    },
+    "Appearance": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erscheinungsbild"
+          }
+        }
+      }
+    },
+    "Append suffix": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suffix anhängen"
+          }
+        }
+      }
+    },
+    "Applies to every app you sign unless you change it for that sign, or a preset overrides it.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gilt für jede App, die du signierst, außer du änderst es für diesen einen Vorgang oder ein Preset überschreibt es."
+          }
+        }
+      }
+    },
+    "Applying modifiers…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modifikatoren werden angewendet…"
+          }
+        }
+      }
+    },
+    "Automatic": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Automatisch"
+          }
+        }
+      }
+    },
+    "Batch Sign": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stapel signieren"
+          }
+        }
+      }
+    },
+    "Before your first direct install, iOS needs to trust AshteMobile's local certificate. Do this once — every install after is a single tap.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vor der ersten Direktinstallation muss iOS AshteMobiles lokalem Zertifikat vertrauen. Einmal erledigt, ist jede weitere Installation nur noch ein Tap."
+          }
+        }
+      }
+    },
+    "Brought in \\(imported) app(s) shared from another app.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\\(imported) App(s) aus einer anderen App übernommen."
+          }
+        }
+      }
+    },
+    "Build": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Build"
+          }
+        }
+      }
+    },
+    "Bundle ID": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bundle-ID"
+          }
+        }
+      }
+    },
+    "Bundled Watch app": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enthält Watch-App"
+          }
+        }
+      }
+    },
+    "Cached": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aus Cache"
+          }
+        }
+      }
+    },
+    "Cancel": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abbrechen"
+          }
+        }
+      }
+    },
+    "Certificate": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zertifikat"
+          }
+        }
+      }
+    },
+    "Certificate (.p12)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zertifikat (.p12)"
+          }
+        }
+      }
+    },
+    "Certificate Name": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zertifikatsname"
+          }
+        }
+      }
+    },
+    "Certificate expiring soon": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zertifikat läuft bald ab"
+          }
+        }
+      }
+    },
+    "Certificates": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zertifikate"
+          }
+        }
+      }
+    },
+    "Changelog": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Änderungsprotokoll"
+          }
+        }
+      }
+    },
+    "Check for Updates": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nach Updates suchen"
+          }
+        }
+      }
+    },
+    "Choose a preset": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preset auswählen"
+          }
+        }
+      }
+    },
+    "Choose…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auswählen…"
+          }
+        }
+      }
+    },
+    "Clear Cache": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cache leeren"
+          }
+        }
+      }
+    },
+    "Close": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schließen"
+          }
+        }
+      }
+    },
+    "Compatibility": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kompatibilität"
+          }
+        }
+      }
+    },
+    "Could not check for updates.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Updates konnten nicht geprüft werden."
+          }
+        }
+      }
+    },
+    "Couldn't load the local server certificate.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das lokale Serverzertifikat konnte nicht geladen werden."
+          }
+        }
+      }
+    },
+    "Couldn't reach that source.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diese Quelle konnte nicht erreicht werden."
+          }
+        }
+      }
+    },
+    "Couldn't read this .p12 certificate file.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diese .p12-Zertifikatsdatei konnte nicht gelesen werden."
+          }
+        }
+      }
+    },
+    "Couldn't read this provisioning profile.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dieses Provisioning-Profil konnte nicht gelesen werden."
+          }
+        }
+      }
+    },
+    "Couldn't repack the signed app into an IPA.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die signierte App konnte nicht wieder zu einer IPA gepackt werden."
+          }
+        }
+      }
+    },
+    "Couldn't unpack this IPA.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diese IPA konnte nicht entpackt werden."
+          }
+        }
+      }
+    },
+    "Custom": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Benutzerdefiniert"
+          }
+        }
+      }
+    },
+    "Customized": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Angepasst"
+          }
+        }
+      }
+    },
+    "Dark": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dunkel"
+          }
+        }
+      }
+    },
+    "Days Remaining": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verbleibende Tage"
+          }
+        }
+      }
+    },
+    "Default": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Standard"
+          }
+        }
+      }
+    },
+    "Default Signing Options": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Standard-Signieroptionen"
+          }
+        }
+      }
+    },
+    "Delete": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Löschen"
+          }
+        }
+      }
+    },
+    "Delete Certificate": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zertifikat löschen"
+          }
+        }
+      }
+    },
+    "Design": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Design"
+          }
+        }
+      }
+    },
+    "Design forces an app to use, or not use, iOS 26's Liquid Glass redesign. Not every app supports being switched either way.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Design erzwingt, dass eine App das Liquid-Glass-Redesign von iOS 26 verwendet oder nicht verwendet. Nicht jede App unterstützt beide Richtungen."
+          }
+        }
+      }
+    },
+    "Didn't Work? Try Wi-Fi Method": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hat nicht geklappt? WLAN-Methode versuchen"
+          }
+        }
+      }
+    },
+    "Didn't Work? Try Without Trusting a Certificate": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hat nicht geklappt? Ohne Zertifikat-Vertrauen versuchen"
+          }
+        }
+      }
+    },
+    "Disable Liquid Glass": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liquid Glass deaktivieren"
+          }
+        }
+      }
+    },
+    "Display Name": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anzeigename"
+          }
+        }
+      }
+    },
+    "Done": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fertig"
+          }
+        }
+      }
+    },
+    "Done in %.1fs.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fertig in %.1fs."
+          }
+        }
+      }
+    },
+    "Done instantly from cache.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sofort aus dem Cache erledigt."
+          }
+        }
+      }
+    },
+    "Download": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Herunterladen"
+          }
+        }
+      }
+    },
+    "Download IPA": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "IPA herunterladen"
+          }
+        }
+      }
+    },
+    "Download from URL": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Von URL herunterladen"
+          }
+        }
+      }
+    },
+    "Encrypted": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verschlüsselt"
+          }
+        }
+      }
+    },
+    "Encrypted binary": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verschlüsselte Binärdatei"
+          }
+        }
+      }
+    },
+    "Entitlements": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entitlements"
+          }
+        }
+      }
+    },
+    "Executables": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Programme"
+          }
+        }
+      }
+    },
+    "Expired": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abgelaufen"
+          }
+        }
+      }
+    },
+    "Expires": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Läuft ab"
+          }
+        }
+      }
+    },
+    "Expiring soon": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Läuft bald ab"
+          }
+        }
+      }
+    },
+    "Export IPA": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "IPA exportieren"
+          }
+        }
+      }
+    },
+    "Export IPA works every time — open it with AltStore, Sideloadly, or TrollStore. Direct on-device install depends on your iOS version and network, so it doesn't always succeed.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "IPA-Export funktioniert immer — öffne sie mit AltStore, Sideloadly oder TrollStore. Die Direktinstallation hängt von deiner iOS-Version und deinem Netzwerk ab und klappt nicht immer."
+          }
+        }
+      }
+    },
+    "Extensions (\\(report.plugins.count))": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erweiterungen (\\(report.plugins.count))"
+          }
+        }
+      }
+    },
+    "Failed": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fehlgeschlagen"
+          }
+        }
+      }
+    },
+    "Files": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dateien"
+          }
+        }
+      }
+    },
+    "Files App Access": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zugriff über Dateien-App"
+          }
+        }
+      }
+    },
+    "Findings": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Befunde"
+          }
+        }
+      }
+    },
+    "Force File Sharing": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dateifreigabe erzwingen"
+          }
+        }
+      }
+    },
+    "Force Full Screen": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vollbild erzwingen"
+          }
+        }
+      }
+    },
+    "Force Game Mode": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spielmodus erzwingen"
+          }
+        }
+      }
+    },
+    "Force Liquid Glass": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liquid Glass erzwingen"
+          }
+        }
+      }
+    },
+    "Force Localized Display Name": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lokalisierten Anzeigenamen erzwingen"
+          }
+        }
+      }
+    },
+    "Force Localized Display Name overrides the app name shown under every language the app supports, not just the default one.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erzwingt den Anzeigenamen in jeder von der App unterstützten Sprache, nicht nur in der Standardsprache."
+          }
+        }
+      }
+    },
+    "Force ProMotion (120Hz)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ProMotion erzwingen (120Hz)"
+          }
+        }
+      }
+    },
+    "Force Re-sign (skip zsign's own cache)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neu signieren erzwingen (zsign-eigenen Cache überspringen)"
+          }
+        }
+      }
+    },
+    "Found an identical signed build in cache — skipping re-sign…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Identischen signierten Build im Cache gefunden — Neusignierung wird übersprungen…"
+          }
+        }
+      }
+    },
+    "Frameworks (\\(report.frameworks.count))": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Frameworks (\\(report.frameworks.count))"
+          }
+        }
+      }
+    },
+    "From Provisioning Profile": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aus Provisioning-Profil"
+          }
+        }
+      }
+    },
+    "Get": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Laden"
+          }
+        }
+      }
+    },
+    "I've Trusted It — Continue": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vertraut — weiter"
+          }
+        }
+      }
+    },
+    "IPA URL": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "IPA-URL"
+          }
+        }
+      }
+    },
+    "Identity": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Identität"
+          }
+        }
+      }
+    },
+    "Import IPA": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "IPA importieren"
+          }
+        }
+      }
+    },
+    "Import Tweak": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tweak importieren"
+          }
+        }
+      }
+    },
+    "Import a .dylib or .deb file to inject it into apps you sign.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importiere eine .dylib- oder .deb-Datei, um sie in signierte Apps einzuschleusen."
+          }
+        }
+      }
+    },
+    "Import a .p12 and its matching .mobileprovision to start signing.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importiere eine .p12-Datei und das passende .mobileprovision, um mit dem Signieren zu starten."
+          }
+        }
+      }
+    },
+    "Import an IPA, download one from a source, or share one in from another app.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importiere eine IPA, lade eine von einer Quelle herunter, oder teile eine aus einer anderen App."
+          }
+        }
+      }
+    },
+    "Importing \\(importingCount) apps…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\\(importingCount) Apps werden importiert…"
+          }
+        }
+      }
+    },
+    "Importing…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wird importiert…"
+          }
+        }
+      }
+    },
+    "Inject Weakly": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schwach einschleusen"
+          }
+        }
+      }
+    },
+    "Inject into Extensions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In Erweiterungen einschleusen"
+          }
+        }
+      }
+    },
+    "Inspect": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Untersuchen"
+          }
+        }
+      }
+    },
+    "Inspector": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inspektor"
+          }
+        }
+      }
+    },
+    "Install": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Installieren"
+          }
+        }
+      }
+    },
+    "Install After Signing": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nach dem Signieren installieren"
+          }
+        }
+      }
+    },
+    "Install on this device": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auf diesem Gerät installieren"
+          }
+        }
+      }
+    },
+    "Instant": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sofort"
+          }
+        }
+      }
+    },
+    "Instant-Resign Cache": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sofort-Neusignier-Cache"
+          }
+        }
+      }
+    },
+    "Invalid certificate.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ungültiges Zertifikat."
+          }
+        }
+      }
+    },
+    "Keep original": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Original behalten"
+          }
+        }
+      }
+    },
+    "Keep original names and IDs": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Originalnamen und IDs behalten"
+          }
+        }
+      }
+    },
+    "Leave this untouched to sign with the entitlements baked into your provisioning profile.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lass dies unverändert, um mit den Entitlements aus deinem Provisioning-Profil zu signieren."
+          }
+        }
+      }
+    },
+    "Library": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bibliothek"
+          }
+        }
+      }
+    },
+    "Light": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hell"
+          }
+        }
+      }
+    },
+    "Light Blue & Black": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hellblau & Schwarz"
+          }
+        }
+      }
+    },
+    "Light Blue & White": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hellblau & Weiß"
+          }
+        }
+      }
+    },
+    "Load Preset": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preset laden"
+          }
+        }
+      }
+    },
+    "Localizations (\\(report.localizations.count))": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lokalisierungen (\\(report.localizations.count))"
+          }
+        }
+      }
+    },
+    "Minimum iOS": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Minimales iOS"
+          }
+        }
+      }
+    },
+    "Minimum iOS Version": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Minimale iOS-Version"
+          }
+        }
+      }
+    },
+    "Modifiers": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modifikatoren"
+          }
+        }
+      }
+    },
+    "Name": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Name"
+          }
+        }
+      }
+    },
+    "Network": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Netzwerk"
+          }
+        }
+      }
+    },
+    "No": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nein"
+          }
+        }
+      }
+    },
+    "No .app bundle was found inside the Payload folder.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Im Payload-Ordner wurde kein .app-Bundle gefunden."
+          }
+        }
+      }
+    },
+    "No .dylib was found inside this .deb package.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In diesem .deb-Paket wurde keine .dylib gefunden."
+          }
+        }
+      }
+    },
+    "No arm64 slice": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kein arm64-Slice"
+          }
+        }
+      }
+    },
+    "No certificates yet": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Noch keine Zertifikate"
+          }
+        }
+      }
+    },
+    "No presets yet": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Noch keine Presets"
+          }
+        }
+      }
+    },
+    "No saved presets yet. Configure signing below, then save it as a preset.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Noch keine gespeicherten Presets. Konfiguriere unten die Signierung und speichere sie als Preset."
+          }
+        }
+      }
+    },
+    "No signing certificate is selected.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Es ist kein Signierzertifikat ausgewählt."
+          }
+        }
+      }
+    },
+    "No sources yet": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Noch keine Quellen"
+          }
+        }
+      }
+    },
+    "No tweaks imported yet. Add .dylib or .deb files from Settings → Tweak Library.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Noch keine Tweaks importiert. Füge .dylib- oder .deb-Dateien unter Einstellungen → Tweak-Bibliothek hinzu."
+          }
+        }
+      }
+    },
+    "No tweaks yet": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Noch keine Tweaks"
+          }
+        }
+      }
+    },
+    "OK": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        }
+      }
+    },
+    "One-time setup": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Einmalige Einrichtung"
+          }
+        }
+      }
+    },
+    "Only needed once, ever.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nur einmal nötig, für immer."
+          }
+        }
+      }
+    },
+    "Open in Safari Instead": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stattdessen in Safari öffnen"
+          }
+        }
+      }
+    },
+    "Options": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Optionen"
+          }
+        }
+      }
+    },
+    "Orange & Black": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Orange & Schwarz"
+          }
+        }
+      }
+    },
+    "Orange & White": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Orange & Weiß"
+          }
+        }
+      }
+    },
+    "Original bundle ID: \\(entry.originalBundleIdentifier ?? entry.bundleIdentifier)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ursprüngliche Bundle-ID: \\(entry.originalBundleIdentifier ?? entry.bundleIdentifier)"
+          }
+        }
+      }
+    },
+    "P12 Password": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "P12-Passwort"
+          }
+        }
+      }
+    },
+    "Preset": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preset"
+          }
+        }
+      }
+    },
+    "Preset name": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preset-Name"
+          }
+        }
+      }
+    },
+    "Presets": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Presets"
+          }
+        }
+      }
+    },
+    "Progress": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fortschritt"
+          }
+        }
+      }
+    },
+    "Provisioned Devices": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Provisionierte Geräte"
+          }
+        }
+      }
+    },
+    "Provisioning Profile (.mobileprovision)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Provisioning-Profil (.mobileprovision)"
+          }
+        }
+      }
+    },
+    "Queued": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In Warteschlange"
+          }
+        }
+      }
+    },
+    "Queued…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In Warteschlange…"
+          }
+        }
+      }
+    },
+    "Random suffix": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zufälliges Suffix"
+          }
+        }
+      }
+    },
+    "Re-check Expiry": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ablauf erneut prüfen"
+          }
+        }
+      }
+    },
+    "Ready to install over your local network.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bereit zur Installation über dein lokales Netzwerk."
+          }
+        }
+      }
+    },
+    "Red & Black": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rot & Schwarz"
+          }
+        }
+      }
+    },
+    "Red & White": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rot & Weiß"
+          }
+        }
+      }
+    },
+    "Removal": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entfernen"
+          }
+        }
+      }
+    },
+    "Remove App Extensions": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App-Erweiterungen entfernen"
+          }
+        }
+      }
+    },
+    "Remove Embedded Provisioning": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eingebettetes Provisioning entfernen"
+          }
+        }
+      }
+    },
+    "Remove Localizations Except English": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lokalisierungen außer Englisch entfernen"
+          }
+        }
+      }
+    },
+    "Remove URL Schemes": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL-Schemes entfernen"
+          }
+        }
+      }
+    },
+    "Remove Watch App": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Watch-App entfernen"
+          }
+        }
+      }
+    },
+    "Rename": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Umbenennen"
+          }
+        }
+      }
+    },
+    "Rename App": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App umbenennen"
+          }
+        }
+      }
+    },
+    "Repacking IPA…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "IPA wird neu gepackt…"
+          }
+        }
+      }
+    },
+    "Repository URL": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Repository-URL"
+          }
+        }
+      }
+    },
+    "Reset": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zurücksetzen"
+          }
+        }
+      }
+    },
+    "Reset every default signing option?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wirklich alle Standard-Signieroptionen zurücksetzen?"
+          }
+        }
+      }
+    },
+    "Reset to Certificate Default": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auf Zertifikat-Standard zurücksetzen"
+          }
+        }
+      }
+    },
+    "Reset to Defaults": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auf Standard zurücksetzen"
+          }
+        }
+      }
+    },
+    "Revoked": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widerrufen"
+          }
+        }
+      }
+    },
+    "Save": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Speichern"
+          }
+        }
+      }
+    },
+    "Save Current as Preset": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktuelles als Preset speichern"
+          }
+        }
+      }
+    },
+    "Save Preset": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preset speichern"
+          }
+        }
+      }
+    },
+    "Save one from the signing sheet when you sign an app.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Speichere eines aus dem Signier-Dialog, wenn du eine App signierst."
+          }
+        }
+      }
+    },
+    "Search your library": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bibliothek durchsuchen"
+          }
+        }
+      }
+    },
+    "Sending to AshteMobile…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wird an AshteMobile gesendet…"
+          }
+        }
+      }
+    },
+    "Set as Default": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Als Standard festlegen"
+          }
+        }
+      }
+    },
+    "Settings": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Einstellungen"
+          }
+        }
+      }
+    },
+    "Shared from another app": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aus einer anderen App geteilt"
+          }
+        }
+      }
+    },
+    "Sign": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signieren"
+          }
+        }
+      }
+    },
+    "Sign All": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle signieren"
+          }
+        }
+      }
+    },
+    "Signed": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signiert"
+          }
+        }
+      }
+    },
+    "Signing": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signieren"
+          }
+        }
+      }
+    },
+    "Signing Identity": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signier-Identität"
+          }
+        }
+      }
+    },
+    "Signing Info": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signierinfo"
+          }
+        }
+      }
+    },
+    "Signing Presets": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signier-Presets"
+          }
+        }
+      }
+    },
+    "Signing failed.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signieren fehlgeschlagen."
+          }
+        }
+      }
+    },
+    "Signing with zsign…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signieren mit zsign…"
+          }
+        }
+      }
+    },
+    "Source on GitHub": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quellcode auf GitHub"
+          }
+        }
+      }
+    },
+    "Sources": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quellen"
+          }
+        }
+      }
+    },
+    "Start": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Starten"
+          }
+        }
+      }
+    },
+    "Status": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Status"
+          }
+        }
+      }
+    },
+    "Suffix": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suffix"
+          }
+        }
+      }
+    },
+    "AshteMobile couldn't prepare its local server certificate.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AshteMobile konnte sein lokales Serverzertifikat nicht vorbereiten."
+          }
+        }
+      }
+    },
+    "AshteMobile doesn't have a saved password for this certificate. Re-add it from Certificates.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AshteMobile hat kein gespeichertes Passwort für dieses Zertifikat. Füge es unter Zertifikate erneut hinzu."
+          }
+        }
+      }
+    },
+    "Team": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Team"
+          }
+        }
+      }
+    },
+    "Team ID": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Team-ID"
+          }
+        }
+      }
+    },
+    "That password doesn't unlock this .p12 file.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dieses Passwort entsperrt diese .p12-Datei nicht."
+          }
+        }
+      }
+    },
+    "The app is missing its Info.plist.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Der App fehlt ihre Info.plist."
+          }
+        }
+      }
+    },
+    "The executable is truncated or damaged.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Programmdatei ist abgeschnitten oder beschädigt."
+          }
+        }
+      }
+    },
+    "The first time you do this, iOS will ask you to trust AshteMobile's local certificate in Settings → General → VPN & Device Management.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beim ersten Mal fragt iOS dich, ob du dem lokalen Zertifikat von AshteMobile unter Einstellungen → Allgemein → VPN & Geräteverwaltung vertraust."
+          }
+        }
+      }
+    },
+    "The signing engine isn't built into this copy of AshteMobile. Run Scripts/fetch-dependencies.sh, then rebuild in Xcode.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Die Signier-Engine ist in dieser Kopie von AshteMobile nicht eingebaut. Führe Scripts/fetch-dependencies.sh aus und baue das Projekt in Xcode neu."
+          }
+        }
+      }
+    },
+    "This .deb package looks corrupted.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dieses .deb-Paket sieht beschädigt aus."
+          }
+        }
+      }
+    },
+    "This .deb uses \\(name) compression, which AshteMobile can't unpack yet. Re-export it as a raw .dylib instead.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dieses .deb verwendet \\(name)-Komprimierung, die AshteMobile noch nicht entpacken kann. Exportiere es stattdessen als rohe .dylib."
+          }
+        }
+      }
+    },
+    "This IPA embeds a watchOS companion app. Remove it in Modifiers if you don't need it.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diese IPA enthält eine watchOS-Begleit-App. Entferne sie unter Modifikatoren, falls du sie nicht brauchst."
+          }
+        }
+      }
+    },
+    "This app is no longer in your library.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diese App ist nicht mehr in deiner Bibliothek."
+          }
+        }
+      }
+    },
+    "This app was removed.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diese App wurde entfernt."
+          }
+        }
+      }
+    },
+    "This doesn't look like a valid IPA file.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das sieht nicht nach einer gültigen IPA-Datei aus."
+          }
+        }
+      }
+    },
+    "This doesn't look like an AltStore or ESign source.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das sieht nicht nach einer AltStore- oder ESign-Quelle aus."
+          }
+        }
+      }
+    },
+    "This file is not a Mach-O executable.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diese Datei ist keine Mach-O-Programmdatei."
+          }
+        }
+      }
+    },
+    "This isn't a valid .deb package.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das ist kein gültiges .deb-Paket."
+          }
+        }
+      }
+    },
+    "Trust Certificate Again": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zertifikat erneut vertrauen"
+          }
+        }
+      }
+    },
+    "Trust AshteMobile's Local Certificate": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AshteMobile' lokalem Zertifikat vertrauen"
+          }
+        }
+      }
+    },
+    "Try Again": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erneut versuchen"
+          }
+        }
+      }
+    },
+    "Try the No-Trust Method Instead": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stattdessen Methode ohne Vertrauen versuchen"
+          }
+        }
+      }
+    },
+    "Try the Wi-Fi Method Instead": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stattdessen WLAN-Methode versuchen"
+          }
+        }
+      }
+    },
+    "Tweak Library": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tweak-Bibliothek"
+          }
+        }
+      }
+    },
+    "Tweaks": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tweaks"
+          }
+        }
+      }
+    },
+    "URL Schemes": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "URL-Schemes"
+          }
+        }
+      }
+    },
+    "Uncompressed Size": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unkomprimierte Größe"
+          }
+        }
+      }
+    },
+    "Unknown": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unbekannt"
+          }
+        }
+      }
+    },
+    "Unknown expiry": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unbekanntes Ablaufdatum"
+          }
+        }
+      }
+    },
+    "Unpacking IPA…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "IPA wird entpackt…"
+          }
+        }
+      }
+    },
+    "Unrestricted Entitlements": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uneingeschränkte Entitlements"
+          }
+        }
+      }
+    },
+    "Unsigned": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unsigniert"
+          }
+        }
+      }
+    },
+    "Untitled app": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unbenannte App"
+          }
+        }
+      }
+    },
+    "Update to \\(updateResult.latestVersion) available": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Update auf \\(updateResult.latestVersion) verfügbar"
+          }
+        }
+      }
+    },
+    "Use Instant-Resign Cache": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sofort-Neusignier-Cache verwenden"
+          }
+        }
+      }
+    },
+    "Used \\(preset.useCount) time(s)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\\(preset.useCount) Mal verwendet"
+          }
+        }
+      }
+    },
+    "Valid": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gültig"
+          }
+        }
+      }
+    },
+    "Version": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version"
+          }
+        }
+      }
+    },
+    "Works with AltStore and ESign-format sources.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Funktioniert mit AltStore- und ESign-Quellen."
+          }
+        }
+      }
+    },
+    "Yes": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ja"
+          }
+        }
+      }
+    },
+    "You're up to date.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Du bist auf dem neuesten Stand."
+          }
+        }
+      }
+    },
+    "Your library is empty": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deine Bibliothek ist leer"
+          }
+        }
+      }
+    },
+    "\\(certificate.name) expires in 3 days. Resign your library before it goes dark.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\\(certificate.name) läuft in 3 Tagen ab. Signiere deine Bibliothek neu, bevor es ungültig wird."
+          }
+        }
+      }
+    },
+    "\\(metadata.plugins.count) extension(s)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\\(metadata.plugins.count) Erweiterung(en)"
+          }
+        }
+      }
+    },
+    "\\(options.injectedDylibIDs.count) tweak(s)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\\(options.injectedDylibIDs.count) Tweak(s)"
+          }
+        }
+      }
+    },
+    "\\(relativePath) has no arm64 architecture and can't run on a real iPhone or iPad.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\\(relativePath) hat keine arm64-Architektur und läuft nicht auf einem echten iPhone oder iPad."
+          }
+        }
+      }
+    },
+    "\\(relativePath) still has its App Store FairPlay encryption. Signing will proceed, but this executable is likely a cracked or DRM-protected build.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\\(relativePath) hat noch die FairPlay-Verschlüsselung des App Store. Das Signieren läuft weiter, aber diese Datei ist vermutlich ein gecrackter oder DRM-geschützter Build."
+          }
+        }
+      }
+    },
+    "com.example.app": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "com.beispiel.app"
+          }
+        }
+      }
+    },
+    "https://example.com/app.ipa": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://beispiel.de/app.ipa"
+          }
+        }
+      }
+    },
+    "https://example.com/repo.json": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "https://beispiel.de/repo.json"
+          }
+        }
+      }
+    },
+    "iTunes File Sharing": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iTunes-Dateifreigabe"
+          }
+        }
+      }
+    },
+    "no plug-ins": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "keine Plug-ins"
+          }
+        }
+      }
+    },
+    "no watch app": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "keine Watch-App"
+          }
+        }
+      }
+    },
+    "Remove all signed apps?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle signierten Apps entfernen?"
+          }
+        }
+      }
+    },
+    "Remove all imported apps?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle importierten Apps entfernen?"
+          }
+        }
+      }
+    },
+    "Remove all certificates?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle Zertifikate entfernen?"
+          }
+        }
+      }
+    },
+    "Reset AshteMobile completely?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AshteMobile komplett zurücksetzen?"
+          }
+        }
+      }
+    },
+    "This deletes every signed app from your library. Their original imported IPAs are removed too.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dies löscht jede signierte App aus deiner Bibliothek. Die ursprünglich importierten IPAs werden ebenfalls entfernt."
+          }
+        }
+      }
+    },
+    "This deletes every app in your library that hasn't been signed yet. Signed apps are left alone.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dies löscht jede App in deiner Bibliothek, die noch nicht signiert wurde. Signierte Apps bleiben unberührt."
+          }
+        }
+      }
+    },
+    "This deletes every certificate, its saved password, and its expiry tracking.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dies löscht jedes Zertifikat, sein gespeichertes Passwort und die Ablaufüberwachung."
+          }
+        }
+      }
+    },
+    "This deletes your entire library, all certificates, tweaks, presets, sources, and the signing cache, and resets every setting. There's no undo.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dies löscht deine gesamte Bibliothek, alle Zertifikate, Tweaks, Vorlagen, Quellen und den Signier-Cache und setzt jede Einstellung zurück. Es gibt kein Rückgängig."
+          }
+        }
+      }
+    },
+    "Reset Everything": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alles zurücksetzen"
+          }
+        }
+      }
+    },
+    "Remove": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entfernen"
+          }
+        }
+      }
+    },
+    "Remove All Signed Apps": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle signierten Apps entfernen"
+          }
+        }
+      }
+    },
+    "Remove All Imported Apps": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle importierten Apps entfernen"
+          }
+        }
+      }
+    },
+    "Remove All Certificates": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle Zertifikate entfernen"
+          }
+        }
+      }
+    },
+    "These remove data from this device only and can't be undone.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dies entfernt Daten nur von diesem Gerät und kann nicht rückgängig gemacht werden."
+          }
+        }
+      }
+    },
+    "View App Folder": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App-Ordner anzeigen"
+          }
+        }
+      }
+    },
+    "Storage": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Speicher"
+          }
+        }
+      }
+    },
+    "Opens AshteMobile's Documents folder in the Files app — imported and signed IPAs, certificates, tweaks, and presets all live there.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Öffnet den Dokumente-Ordner von AshteMobile in der Dateien-App — importierte und signierte IPAs, Zertifikate, Tweaks und Vorlagen liegen dort."
+          }
+        }
+      }
+    },
+    "Preparing install…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Installation wird vorbereitet…"
+          }
+        }
+      }
+    },
+    "Waiting for iOS…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Warte auf iOS…"
+          }
+        }
+      }
+    },
+    "Sending payload…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Payload wird gesendet…"
+          }
+        }
+      }
+    },
+    "Installing…": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wird installiert…"
+          }
+        }
+      }
+    },
+    "Install failed": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Installation fehlgeschlagen"
+          }
+        }
+      }
+    },
+    "Confirm the install prompt from iOS.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bestätige die Installationsabfrage von iOS."
+          }
+        }
+      }
+    },
+    "Keep AshteMobile open until the transfer finishes.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lass AshteMobile offen, bis die Übertragung fertig ist."
+          }
+        }
+      }
+    },
+    "Watch your Home Screen, the app appears there in a moment.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schau auf deinen Home-Bildschirm, die App erscheint dort gleich."
+          }
+        }
+      }
+    },
+    "AshteMobile can't install over itself, iOS closes it mid-transfer. Use Export IPA and install it with another signer.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AshteMobile kann sich nicht selbst überschreiben, iOS beendet die App mitten in der Übertragung. Nutze Export IPA und installiere es mit einem anderen Signer."
+          }
+        }
+      }
+    },
+    "%@ is added automatically when a tweak needs CydiaSubstrate.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ wird automatisch hinzugefügt, wenn ein Tweak CydiaSubstrate braucht."
+          }
+        }
+      }
+    },
+    "%@ needs CydiaSubstrate or ElleKit. Import ElleKit's .deb (or libellekit.dylib) in the Tweak Library, then sign again.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ braucht CydiaSubstrate oder ElleKit. Importiere die .deb von ElleKit (oder libellekit.dylib) in der Tweak-Bibliothek und signiere dann erneut."
+          }
+        }
+      }
+    },
+    "%lld changed": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld geändert"
+          }
+        }
+      }
+    },
+    "1. Open …\n2. Tap …\n3. …": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1. Öffne …\n2. Tippe auf …\n3. …"
+          }
+        }
+      }
+    },
+    "Add .dylib or .deb": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ".dylib oder .deb hinzufügen"
+          }
+        }
+      }
+    },
+    "Appearance, compatibility, removal, network, entitlements and speed settings.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Darstellung, Kompatibilität, Entfernen, Netzwerk, Entitlements und Geschwindigkeit."
+          }
+        }
+      }
+    },
+    "Bug": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bug"
+          }
+        }
+      }
+    },
+    "Bugs & Issues": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bugs & Probleme"
+          }
+        }
+      }
+    },
+    "Cache": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cache"
+          }
+        }
+      }
+    },
+    "Certificate bundle ID: %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bundle-ID des Zertifikats: %@"
+          }
+        }
+      }
+    },
+    "Couldn't read a bundle ID from this certificate's profile, so the original is kept.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aus dem Profil dieses Zertifikats konnte keine Bundle-ID gelesen werden, daher bleibt die ursprüngliche erhalten."
+          }
+        }
+      }
+    },
+    "Fast Packaging": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schnelles Packen"
+          }
+        }
+      }
+    },
+    "Fast Packaging skips compressing the signed IPA. Signing finishes a lot quicker, the IPA just takes more space.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schnelles Packen überspringt das Komprimieren der signierten IPA. Das Signieren geht deutlich schneller, die IPA braucht nur mehr Speicher."
+          }
+        }
+      }
+    },
+    "Feature Request": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Funktionswunsch"
+          }
+        }
+      }
+    },
+    "From certificate": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vom Zertifikat"
+          }
+        }
+      }
+    },
+    "Import Failed": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Import fehlgeschlagen"
+          }
+        }
+      }
+    },
+    "Include Device Info": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geräteinfos anhängen"
+          }
+        }
+      }
+    },
+    "May not load without: %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lädt eventuell nicht ohne: %@"
+          }
+        }
+      }
+    },
+    "More Options": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weitere Optionen"
+          }
+        }
+      }
+    },
+    "Needs ElleKit – import its .deb first": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Braucht ElleKit – importiere zuerst dessen .deb"
+          }
+        }
+      }
+    },
+    "Only what's shown here is added. Nothing is sent until you submit the issue on GitHub.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Es wird nur hinzugefügt, was hier angezeigt wird. Nichts wird gesendet, bis du das Issue auf GitHub abschickst."
+          }
+        }
+      }
+    },
+    "Open Issue on GitHub": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Issue auf GitHub öffnen"
+          }
+        }
+      }
+    },
+    "Opens github.com with the issue already filled in. You need a GitHub account to submit it.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Öffnet github.com mit bereits ausgefülltem Issue. Zum Abschicken brauchst du ein GitHub-Konto."
+          }
+        }
+      }
+    },
+    "Original bundle ID: %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ursprüngliche Bundle-ID: %@"
+          }
+        }
+      }
+    },
+    "Question": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Frage"
+          }
+        }
+      }
+    },
+    "Re-sign": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neu signieren"
+          }
+        }
+      }
+    },
+    "Rename Tweak": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tweak umbenennen"
+          }
+        }
+      }
+    },
+    "Report": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meldung"
+          }
+        }
+      }
+    },
+    "Short summary": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kurze Zusammenfassung"
+          }
+        }
+      }
+    },
+    "Signs as: %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wird signiert als: %@"
+          }
+        }
+      }
+    },
+    "Speed": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geschwindigkeit"
+          }
+        }
+      }
+    },
+    "Steps to Reproduce": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schritte zum Nachstellen"
+          }
+        }
+      }
+    },
+    "Stop Using as Substrate": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nicht mehr als Substrate verwenden"
+          }
+        }
+      }
+    },
+    "Storage & Reset": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Speicher & Zurücksetzen"
+          }
+        }
+      }
+    },
+    "Substrate": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Substrate"
+          }
+        }
+      }
+    },
+    "Support": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Support"
+          }
+        }
+      }
+    },
+    "Theme": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Design"
+          }
+        }
+      }
+    },
+    "There isn't enough room in the tweak to point it at %@. Rename the substrate dylib in the Tweak Library to something shorter.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Im Tweak ist nicht genug Platz, um ihn auf %@ zu verweisen. Benenne die Substrate-dylib in der Tweak-Bibliothek kürzer um."
+          }
+        }
+      }
+    },
+    "This .deb uses %@ compression, which AshteMobile can't unpack yet. Re-export it as a raw .dylib instead.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diese .deb nutzt %@-Komprimierung, die AshteMobile noch nicht entpacken kann. Exportiere sie stattdessen als .dylib."
+          }
+        }
+      }
+    },
+    "This certificate is a wildcard, so the original bundle ID is kept.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dieses Zertifikat ist ein Wildcard-Zertifikat, daher bleibt die ursprüngliche Bundle-ID erhalten."
+          }
+        }
+      }
+    },
+    "Tweaks from a .deb that hook with CydiaSubstrate need ElleKit. Import ElleKit's .deb once and AshteMobile injects it automatically whenever a tweak needs it. Long-press a tweak for more options.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tweaks aus einer .deb, die mit CydiaSubstrate hooken, brauchen ElleKit. Importiere die .deb von ElleKit einmal und AshteMobile injiziert es automatisch, wann immer ein Tweak es braucht. Halte einen Tweak gedrückt für mehr Optionen."
+          }
+        }
+      }
+    },
+    "Tweaks from a .deb usually need ElleKit. Add ElleKit's .deb here too and it gets injected automatically.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tweaks aus einer .deb brauchen meist ElleKit. Füge hier auch die .deb von ElleKit hinzu, dann wird es automatisch injiziert."
+          }
+        }
+      }
+    },
+    "Type": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Art"
+          }
+        }
+      }
+    },
+    "Use Bundle ID from Certificate": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bundle-ID vom Zertifikat verwenden"
+          }
+        }
+      }
+    },
+    "Use as Substrate (ElleKit)": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Als Substrate verwenden (ElleKit)"
+          }
+        }
+      }
+    },
+    "Uses the bundle ID from the provisioning profile of the certificate you sign with. Wildcard profiles keep the app's own ID.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verwendet die Bundle-ID aus dem Provisioning-Profil des Zertifikats, mit dem du signierst. Bei Wildcard-Profilen bleibt die ID der App erhalten."
+          }
+        }
+      }
+    },
+    "View Open Issues": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Offene Issues ansehen"
+          }
+        }
+      }
+    },
+    "What happened, and what did you expect?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Was ist passiert und was hast du erwartet?"
+          }
+        }
+      }
+    },
+    "What would you like AshteMobile to do?": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Was soll AshteMobile können?"
+          }
+        }
+      }
+    },
+    "App Icon": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App-Icon"
+          }
+        }
+      }
+    },
+    "Custom Icon": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eigenes Icon"
+          }
+        }
+      }
+    },
+    "Choose": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auswählen"
+          }
+        }
+      }
+    },
+    "Change": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ändern"
+          }
+        }
+      }
+    },
+    "Couldn't Use That Image": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bild konnte nicht verwendet werden"
+          }
+        }
+      }
+    },
+    "Couldn't load that image.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das Bild konnte nicht geladen werden."
+          }
+        }
+      }
+    },
+    "Couldn't convert that image to PNG.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Das Bild konnte nicht in PNG umgewandelt werden."
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
