@@ -7,6 +7,8 @@ final class SourceStore: ObservableObject {
 
     @Published private(set) var sources: [RepositorySource] = []
     @Published private(set) var catalog: [UUID: [RepositoryApp]] = [:]
+    @Published private(set) var loading: Set<UUID> = []
+    @Published private(set) var failed: Set<UUID> = []
 
     private let defaults = UserDefaults.standard
     private let key = "AshteMobile.repositorySources"
@@ -14,18 +16,17 @@ final class SourceStore: ObservableObject {
     /// The built-in Ashte source that ships with the app.
     static let defaultSourceURL = URL(string: "https://github.com/ios94/ashtejson/raw/refs/heads/main/ashtemobile94.json")!
     private static let defaultSourceID = UUID(uuidString: "A5470000-0000-4000-8000-000000000094")!
-    private let seededKey = "AshteMobile.defaultSourceSeeded"
+    private let removedKey = "AshteMobile.defaultSourceRemoved"
 
     private init() {
         sources = load()
-        seedDefaultSourceIfNeeded()
+        ensureDefaultSource()
         Task { await refreshAll() }
     }
 
-    /// Adds the Ashte source once, on first launch. If the user removes it later, it stays removed.
-    private func seedDefaultSourceIfNeeded() {
-        guard !defaults.bool(forKey: seededKey) else { return }
-        defaults.set(true, forKey: seededKey)
+    /// Makes sure the Ashte source is in the list, unless the user deliberately removed it.
+    func ensureDefaultSource() {
+        guard !defaults.bool(forKey: removedKey) else { return }
         guard !sources.contains(where: { $0.url == Self.defaultSourceURL }) else { return }
         let source = RepositorySource(
             id: Self.defaultSourceID,
@@ -39,8 +40,11 @@ final class SourceStore: ObservableObject {
 
     /// Catalogs live in memory only, so reload every source's apps at launch.
     func refreshAll() async {
-        for source in sources {
-            await refresh(source)
+        let current = await MainActor.run { self.sources }
+        await withTaskGroup(of: Void.self) { group in
+            for source in current {
+                group.addTask { await self.refresh(source) }
+            }
         }
     }
 
@@ -66,6 +70,9 @@ final class SourceStore: ObservableObject {
     }
 
     func removeSource(_ source: RepositorySource) {
+        if source.url == Self.defaultSourceURL {
+            defaults.set(true, forKey: removedKey)
+        }
         withAnimation(.easeOut(duration: 0.25)) {
             sources.removeAll { $0.id == source.id }
         }
@@ -74,16 +81,28 @@ final class SourceStore: ObservableObject {
     }
 
     func removeAll() {
+        defaults.removeObject(forKey: removedKey)
         withAnimation(.easeOut(duration: 0.25)) {
             sources.removeAll()
         }
         catalog.removeAll()
         persist()
+        ensureDefaultSource()
+        Task { await refreshAll() }
     }
 
     func refresh(_ source: RepositorySource) async {
-        guard let payload = try? await RepositoryService.fetch(url: source.url) else { return }
         await MainActor.run {
+            loading.insert(source.id)
+            failed.remove(source.id)
+        }
+        let payload = try? await RepositoryService.fetch(url: source.url)
+        await MainActor.run {
+            loading.remove(source.id)
+            guard let payload else {
+                failed.insert(source.id)
+                return
+            }
             guard let index = sources.firstIndex(where: { $0.id == source.id }) else { return }
             sources[index].lastRefreshedAt = Date()
             sources[index].appCount = payload.apps.count
