@@ -9,6 +9,7 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           unzip -q AshteMobile-main.zip
+          rm -rf AshteMobile-main/.github/workflows
           cp -a AshteMobile-main/. .
           rm -rf AshteMobile-main AshteMobile-main.zip
           git config user.name "bot"
