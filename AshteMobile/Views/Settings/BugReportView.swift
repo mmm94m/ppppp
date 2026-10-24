@@ -57,6 +57,7 @@ struct BugReportView: View {
                 .listRowBackground(Color.clear)
                 .listRowInsets(EdgeInsets())
             }
+        .siRowBackground()
 
             Section {
                 TextField("Short summary", text: $title)
@@ -75,6 +76,7 @@ struct BugReportView: View {
             } header: {
                 Text("Report")
             }
+        .siRowBackground()
 
             if kind == .bug {
                 Section {
@@ -93,6 +95,7 @@ struct BugReportView: View {
                 } header: {
                     Text("Steps to Reproduce")
                 }
+        .siRowBackground()
             }
 
             Section {
@@ -106,6 +109,7 @@ struct BugReportView: View {
             } footer: {
                 Text("Only what's shown here is added. Nothing is sent until you submit the issue on GitHub.")
             }
+        .siRowBackground()
 
             Section {
                 Button {
@@ -120,6 +124,7 @@ struct BugReportView: View {
             } footer: {
                 Text("Opens github.com with the issue already filled in. You need a GitHub account to submit it.")
             }
+        .siRowBackground()
         }
         .siScreen()
         .navigationTitle("Bugs & Issues")

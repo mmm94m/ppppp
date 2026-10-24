@@ -45,17 +45,8 @@ struct RepositoryAppCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: SISpacing.sm + 2) {
             HStack(spacing: SISpacing.md) {
-                AsyncImage(url: app.iconURL) { image in
-                    image.resizable().scaledToFill()
-                } placeholder: {
-                    ZStack {
-                        SIColor.surfaceElevated
-                        Image(systemName: "app.fill").foregroundStyle(SIColor.textSecondary)
-                    }
-                }
-                .frame(width: 60, height: 60)
-                .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
-                .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).stroke(SIColor.border.opacity(0.6), lineWidth: 0.5))
+                RemoteIcon(url: app.iconURL, name: app.name, cornerRadius: 15)
+                    .frame(width: 62, height: 62)
 
                 VStack(alignment: .leading, spacing: 3) {
                     Text(app.name)

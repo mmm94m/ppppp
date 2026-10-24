@@ -73,6 +73,7 @@ struct SigningOptionsEditor: View {
         } footer: {
             Text("Appearance, compatibility, removal, network, entitlements and speed settings.")
         }
+        .siRowBackground()
     }
 
     /// How many of the options behind "More Options" differ from a fresh default.
@@ -118,6 +119,7 @@ struct SigningOptionsEditor: View {
         } footer: {
             Text("Design forces an app to use, or not use, iOS 26's Liquid Glass redesign. Not every app supports being switched either way.")
         }
+        .siRowBackground()
     }
 
     private var compatibilitySection: some View {
@@ -133,6 +135,7 @@ struct SigningOptionsEditor: View {
         } footer: {
             Text("Force Localized Display Name overrides the app name shown under every language the app supports, not just the default one.")
         }
+        .siRowBackground()
     }
 
     private var removalSection: some View {
@@ -145,6 +148,7 @@ struct SigningOptionsEditor: View {
         } header: {
             Text("Removal")
         }
+        .siRowBackground()
     }
 
     private var networkSection: some View {
@@ -153,6 +157,7 @@ struct SigningOptionsEditor: View {
         } header: {
             Text("Network")
         }
+        .siRowBackground()
     }
 
     private var injectableTweaks: [InjectedDylib] {
@@ -203,6 +208,7 @@ struct SigningOptionsEditor: View {
                 Text("Tweaks from a .deb usually need ElleKit. Add ElleKit's .deb here too and it gets injected automatically.")
             }
         }
+        .siRowBackground()
         .sheet(isPresented: $showingTweakPicker) {
             DocumentPickerView(contentTypes: [.data, .item], allowsMultipleSelection: true) { urls in
                 importTweaks(urls)
@@ -262,6 +268,7 @@ struct SigningOptionsEditor: View {
         } footer: {
             Text("Leave this untouched to sign with the entitlements baked into your provisioning profile.")
         }
+        .siRowBackground()
     }
 
     private var advancedSection: some View {
@@ -277,5 +284,6 @@ struct SigningOptionsEditor: View {
         } footer: {
             Text("Fast Packaging skips compressing the signed IPA. Signing finishes a lot quicker, the IPA just takes more space.")
         }
+        .siRowBackground()
     }
 }

@@ -33,12 +33,15 @@ struct SIEmptyState<Actions: View>: View {
 
     var body: some View {
         VStack(spacing: SISpacing.sm) {
-            Image(systemName: systemImage)
-                .font(.system(size: 32, weight: .light))
-                .foregroundStyle(SIColor.textSecondary)
-                .padding(.bottom, SISpacing.xs)
+            ZStack {
+                Circle().fill(SIColor.accentMuted).frame(width: 84, height: 84)
+                Image(systemName: systemImage)
+                    .font(.system(size: 34, weight: .medium))
+                    .foregroundStyle(SIColor.accent)
+            }
+            .padding(.bottom, SISpacing.xs)
             Text(title)
-                .font(SIFont.headline)
+                .font(.system(.title3, design: .rounded).weight(.bold))
                 .foregroundStyle(SIColor.textPrimary)
             Text(message)
                 .font(SIFont.caption)

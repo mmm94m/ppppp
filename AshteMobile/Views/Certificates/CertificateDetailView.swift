@@ -30,6 +30,7 @@ struct CertificateDetailView: View {
                         }
                         LabeledContent("Unrestricted Entitlements", value: certificate.supportsUnrestrictedEntitlements ? String(localized: "Yes") : String(localized: "No"))
                     }
+        .siRowBackground()
 
                     Section {
                         Button {
@@ -49,6 +50,7 @@ struct CertificateDetailView: View {
                             }
                         }
                     }
+        .siRowBackground()
 
                     Section {
                         Button(role: .destructive) {
@@ -58,6 +60,7 @@ struct CertificateDetailView: View {
                             Label("Delete Certificate", systemImage: "trash")
                         }
                     }
+        .siRowBackground()
                 }
                 .listStyle(.insetGrouped)
                 .navigationTitle(certificate.name)

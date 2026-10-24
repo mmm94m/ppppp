@@ -50,27 +50,57 @@ struct SettingsView: View {
     var body: some View {
         List {
             Section {
+                HStack(spacing: SISpacing.md) {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 16, style: .continuous)
+                            .fill(LinearGradient(colors: [SIColor.accent, SIColor.accent.opacity(0.6)], startPoint: .topLeading, endPoint: .bottomTrailing))
+                        Image(systemName: "signature")
+                            .font(.system(size: 28, weight: .semibold))
+                            .foregroundStyle(SIColor.onAccent)
+                    }
+                    .frame(width: 64, height: 64)
+                    .shadow(color: SIColor.accent.opacity(0.35), radius: 14, y: 5)
+
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text("AshteMobile")
+                            .font(.system(.title2, design: .rounded).weight(.bold))
+                            .foregroundStyle(SIColor.textPrimary)
+                        Text(versionString)
+                            .font(SIFont.caption)
+                            .foregroundStyle(SIColor.textSecondary)
+                    }
+                    Spacer(minLength: 0)
+                }
+                .padding(.vertical, SISpacing.xs)
+            }
+            .listRowBackground(
+                LinearGradient(colors: [SIColor.accent.opacity(0.18), SIColor.surface], startPoint: .topLeading, endPoint: .bottomTrailing)
+            )
+
+            Section {
                 NavigationLink {
                     CertificatesView()
                 } label: {
-                    LabeledContent("Certificates", value: "\(certificateStore.certificates.count)")
+                    SettingsLabel(title: "Certificates", icon: "checkmark.seal.fill", color: Color(hex: 0x30D158), value: "\(certificateStore.certificates.count)")
                 }
                 NavigationLink {
                     TweaksLibraryView()
                 } label: {
-                    LabeledContent("Tweak Library", value: "\(dylibStore.dylibs.count)")
+                    SettingsLabel(title: "Tweak Library", icon: "puzzlepiece.extension.fill", color: Color(hex: 0xBF5AF2), value: "\(dylibStore.dylibs.count)")
                 }
-                NavigationLink("Signing Presets") { PresetsView() }
-                NavigationLink("Default Signing Options") { DefaultSigningOptionsView() }
+                NavigationLink { PresetsView() } label: { SettingsLabel(title: "Signing Presets", icon: "slider.horizontal.3", color: Color(hex: 0x0A84FF)) }
+                NavigationLink { DefaultSigningOptionsView() } label: { SettingsLabel(title: "Default Signing Options", icon: "signature", color: Color(hex: 0xFF9F0A)) }
             } header: {
                 Text("Signing")
             }
+        .siRowBackground()
 
             Section {
                 NavigationLink {
                     ThemePickerView()
                 } label: {
-                    HStack {
+                    HStack(spacing: SISpacing.md) {
+                        SIIconBadge(systemName: "paintpalette.fill", color: Color(hex: 0xFF375F))
                         Text("Theme")
                         Spacer()
                         Circle()
@@ -83,6 +113,7 @@ struct SettingsView: View {
             } header: {
                 Text("Appearance")
             }
+        .siRowBackground()
 
             Section {
                 LabeledContent("Instant-Resign Cache", value: ByteCountFormatter.string(fromByteCount: cacheSize, countStyle: .file))
@@ -93,14 +124,16 @@ struct SettingsView: View {
             } header: {
                 Text("Cache")
             }
+        .siRowBackground()
 
             Section {
-                NavigationLink("Bugs & Issues") { BugReportView() }
-                NavigationLink("Changelog") { ChangelogView() }
-                Link("Source on GitHub", destination: BugReportView.repositoryURL)
+                NavigationLink { BugReportView() } label: { SettingsLabel(title: "Bugs & Issues", icon: "ladybug.fill", color: Color(hex: 0xFF453A)) }
+                NavigationLink { ChangelogView() } label: { SettingsLabel(title: "Changelog", icon: "clock.arrow.circlepath", color: Color(hex: 0x64D2FF)) }
+                Link(destination: BugReportView.repositoryURL) { SettingsLabel(title: "Source on GitHub", icon: "chevron.left.forwardslash.chevron.right", color: Color(hex: 0x5E5CE6)) }
             } header: {
                 Text("Support")
             }
+        .siRowBackground()
 
             Section {
                 LabeledContent("Version", value: versionString)
@@ -126,10 +159,12 @@ struct SettingsView: View {
             } header: {
                 Text("About")
             }
+        .siRowBackground()
 
             Section {
-                NavigationLink("Storage & Reset") { StorageResetView() }
+                NavigationLink { StorageResetView() } label: { SettingsLabel(title: "Storage & Reset", icon: "externaldrive.fill", color: Color(hex: 0x8E8E93)) }
             }
+        .siRowBackground()
         }
         .listStyle(.insetGrouped)
         .siScreen()
@@ -207,6 +242,7 @@ private struct StorageResetView: View {
             } footer: {
                 Text("Opens AshteMobile's Documents folder in the Files app — imported and signed IPAs, certificates, tweaks, and presets all live there.")
             }
+        .siRowBackground()
 
             Section {
                 Button("Remove All Signed Apps", role: .destructive) { pendingReset = .signedApps }
@@ -218,6 +254,7 @@ private struct StorageResetView: View {
             } footer: {
                 Text("These remove data from this device only and can't be undone.")
             }
+        .siRowBackground()
         }
         .listStyle(.insetGrouped)
         .siScreen()

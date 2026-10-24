@@ -132,16 +132,8 @@ struct SourceHeader: View {
 
     var body: some View {
         HStack(spacing: SISpacing.md) {
-            AsyncImage(url: source.iconURL) { image in
-                image.resizable().scaledToFill()
-            } placeholder: {
-                ZStack {
-                    SIColor.accentMuted
-                    Image(systemName: "shippingbox.fill").foregroundStyle(SIColor.accent)
-                }
-            }
-            .frame(width: 40, height: 40)
-            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+            RemoteIcon(url: source.iconURL, name: source.name, cornerRadius: 11)
+                .frame(width: 42, height: 42)
 
             VStack(alignment: .leading, spacing: 2) {
                 Text(source.name)

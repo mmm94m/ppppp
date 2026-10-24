@@ -27,6 +27,7 @@ struct DefaultSigningOptionsView: View {
                     Text("Applies to every app you sign unless you change it for that sign, or a preset overrides it.")
                 }
             }
+        .siRowBackground()
 
             SigningOptionsEditor(options: $defaultsStore.options, certificateID: nil, showsInstallToggle: true)
 
@@ -37,6 +38,7 @@ struct DefaultSigningOptionsView: View {
                     Text("Reset to Defaults")
                 }
             }
+        .siRowBackground()
         }
         .siScreen()
         .navigationTitle("Default Signing Options")

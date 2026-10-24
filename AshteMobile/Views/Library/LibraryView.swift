@@ -95,16 +95,22 @@ struct LibraryView: View {
     }
 
     private var libraryList: some View {
-        List {
-            ForEach(filteredApps) { entry in
-                libraryRow(for: entry)
+        ScrollView {
+            LazyVStack(spacing: SISpacing.sm + 2) {
+                ForEach(filteredApps) { entry in
+                    libraryRow(for: entry)
+                        .contextMenu {
+                            Button(role: .destructive) {
+                                library.remove(entry)
+                            } label: {
+                                Label("Delete", systemImage: "trash")
+                            }
+                        }
+                }
             }
-            .onDelete(perform: delete)
-            .listRowInsets(EdgeInsets(top: SISpacing.xs, leading: SISpacing.md, bottom: SISpacing.xs, trailing: SISpacing.md))
-            .listRowBackground(Color.clear)
-            .listRowSeparator(.hidden)
+            .padding(.horizontal, SISpacing.md)
+            .padding(.vertical, SISpacing.sm)
         }
-        .listStyle(.plain)
         .searchable(text: $searchText, prompt: Text("Search your library"))
     }
 
@@ -157,12 +163,6 @@ struct LibraryView: View {
         }
     }
 
-    private func delete(at offsets: IndexSet) {
-        for index in offsets {
-            library.remove(filteredApps[index])
-        }
-    }
-
     private func handleImport(_ urls: [URL]) {
         guard !urls.isEmpty else { return }
         importingCount = urls.count
@@ -198,24 +198,30 @@ struct AppRow: View {
         HStack(spacing: SISpacing.md) {
             if isSelected {
                 Image(systemName: "checkmark.circle.fill")
+                    .font(.system(size: 22))
                     .foregroundStyle(SIColor.accent)
             }
 
             iconView
-                .frame(width: 46, height: 46)
-                .clipShape(RoundedRectangle(cornerRadius: SIRadius.md, style: .continuous))
+                .frame(width: 58, height: 58)
+                .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+                .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).stroke(SIColor.border.opacity(0.6), lineWidth: 0.5))
 
             VStack(alignment: .leading, spacing: 3) {
                 Text(entry.name)
-                    .font(SIFont.headline)
+                    .font(.system(.headline, design: .rounded))
                     .foregroundStyle(SIColor.textPrimary)
-                Text("\(entry.bundleIdentifier) · \(entry.displayVersion)")
+                    .lineLimit(1)
+                Text(entry.bundleIdentifier)
                     .font(SIFont.caption)
                     .foregroundStyle(SIColor.textSecondary)
                     .lineLimit(1)
+                Text("\(entry.displayVersion) · \(entry.displaySize)")
+                    .font(.system(size: 11, weight: .medium, design: .rounded))
+                    .foregroundStyle(SIColor.textSecondary)
             }
 
-            Spacer()
+            Spacer(minLength: 8)
 
             if entry.isSigned {
                 StatusBadge(text: String(localized: "Signed"), color: SIColor.success)
@@ -223,13 +229,11 @@ struct AppRow: View {
                 StatusBadge(text: String(localized: "Unsigned"), color: SIColor.textSecondary, style: .plain)
             }
         }
-        .padding(SISpacing.sm + 2)
-        .siCard()
+        .padding(SISpacing.md)
+        .background(SIColor.surface, in: RoundedRectangle(cornerRadius: SIRadius.lg, style: .continuous))
         .overlay {
-            if isSelected {
-                RoundedRectangle(cornerRadius: SIRadius.md, style: .continuous)
-                    .stroke(SIColor.accent, lineWidth: 2)
-            }
+            RoundedRectangle(cornerRadius: SIRadius.lg, style: .continuous)
+                .stroke(isSelected ? SIColor.accent : SIColor.border.opacity(0.5), lineWidth: isSelected ? 2 : 0.5)
         }
     }
 
@@ -238,9 +242,10 @@ struct AppRow: View {
         if let iconURL = AppLibraryStore.shared.iconURL(for: entry), let uiImage = UIImage(contentsOfFile: iconURL.path) {
             Image(uiImage: uiImage).resizable().scaledToFill()
         } else {
-            RoundedRectangle(cornerRadius: SIRadius.md, style: .continuous)
-                .fill(SIColor.accentMuted)
-                .overlay(Image(systemName: "app.dashed").foregroundStyle(SIColor.accent))
+            ZStack {
+                SIColor.accentMuted
+                Image(systemName: "app.dashed").font(.system(size: 22)).foregroundStyle(SIColor.accent)
+            }
         }
     }
 }

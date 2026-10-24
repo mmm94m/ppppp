@@ -66,6 +66,7 @@ struct TweaksLibraryView: View {
             } footer: {
                 Text("Tweaks from a .deb that hook with CydiaSubstrate need ElleKit. Import ElleKit's .deb once and AshteMobile injects it automatically whenever a tweak needs it. Long-press a tweak for more options.")
             }
+        .siRowBackground()
         }
         .listStyle(.insetGrouped)
     }

@@ -32,6 +32,7 @@ struct SigningSheetView: View {
         NavigationStack {
             Form {
                 if let entry {
+                    headerSection(entry: entry)
                     if isSigning {
                         progressSection
                             .transition(.opacity.combined(with: .move(edge: .top)))
@@ -54,18 +55,26 @@ struct SigningSheetView: View {
                 ToolbarItem(placement: .primaryAction) {
                     presetMenu
                 }
-                ToolbarItem(placement: .confirmationAction) {
-                    Button {
-                        sign()
-                    } label: {
+            }
+            .safeAreaInset(edge: .bottom) {
+                Button {
+                    sign()
+                } label: {
+                    HStack(spacing: SISpacing.sm) {
                         if isSigning {
-                            ProgressView()
+                            ProgressView().tint(SIColor.onAccent)
                         } else {
-                            Text("Sign")
+                            Image(systemName: "signature")
                         }
+                        Text("Sign")
                     }
-                    .disabled(certificateID == nil || isSigning)
                 }
+                .buttonStyle(.siPrimaryWide)
+                .disabled(certificateID == nil || isSigning)
+                .opacity(certificateID == nil ? 0.45 : 1)
+                .padding(.horizontal, SISpacing.md)
+                .padding(.vertical, SISpacing.sm)
+                .background(.ultraThinMaterial)
             }
             .onAppear(perform: prepareDefaults)
             .onChange(of: pickedIconItem) { newItem in
@@ -88,6 +97,35 @@ struct SigningSheetView: View {
                 }
             }
         }
+    }
+
+    private func headerSection(entry: AppEntry) -> some View {
+        Section {
+            HStack(spacing: SISpacing.md) {
+                iconPreview(for: entry)
+                    .frame(width: 64, height: 64)
+                    .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                    .overlay(RoundedRectangle(cornerRadius: 15, style: .continuous).stroke(SIColor.border.opacity(0.6), lineWidth: 0.5))
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(entry.name)
+                        .font(.system(.title3, design: .rounded).weight(.bold))
+                        .foregroundStyle(SIColor.textPrimary)
+                        .lineLimit(1)
+                    Text(entry.bundleIdentifier)
+                        .font(SIFont.caption)
+                        .foregroundStyle(SIColor.textSecondary)
+                        .lineLimit(1)
+                    Text("\(entry.displayVersion) · \(entry.displaySize)")
+                        .font(.system(size: 11, weight: .semibold, design: .rounded))
+                        .foregroundStyle(SIColor.accent)
+                }
+                Spacer(minLength: 0)
+            }
+            .padding(.vertical, SISpacing.xs)
+        }
+        .listRowBackground(
+            LinearGradient(colors: [SIColor.accent.opacity(0.18), SIColor.surface], startPoint: .topLeading, endPoint: .bottomTrailing)
+        )
     }
 
     private var presetMenu: some View {
@@ -129,6 +167,7 @@ struct SigningSheetView: View {
                 }
             }
         }
+        .siRowBackground()
     }
 
     private var certificateBundleID: String? {
@@ -205,6 +244,7 @@ struct SigningSheetView: View {
         } footer: {
             identityFooter(original: original)
         }
+        .siRowBackground()
     }
 
     @ViewBuilder
@@ -287,6 +327,7 @@ struct SigningSheetView: View {
             }
             .animation(.easeOut(duration: 0.2), value: jobStatus)
         }
+        .siRowBackground()
     }
 
     @ViewBuilder

@@ -94,6 +94,21 @@ struct RepositoryApp: Decodable, Identifiable, Hashable {
         case name, bundleIdentifier, developerName, subtitle, localizedDescription
         case iconURL, icon, versions, version, downloadURL, size, versionDate
         case minOSVersion, versionDescription, absoluteVersion
+        case image, imageURL, logo, iconUrl, iconurl
+    }
+
+    private static func lenientURL(_ container: KeyedDecodingContainer<CodingKeys>, _ keys: [CodingKeys]) -> URL? {
+        for key in keys {
+            guard let raw = try? container.decodeIfPresent(String.self, forKey: key) else { continue }
+            let text = raw.trimmingCharacters(in: .whitespacesAndNewlines)
+            guard !text.isEmpty else { continue }
+            if let url = URL(string: text) { return url }
+            if let encoded = text.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed.union(CharacterSet(charactersIn: "#"))),
+               let url = URL(string: encoded) {
+                return url
+            }
+        }
+        return nil
     }
 
     init(from decoder: Decoder) throws {
@@ -103,9 +118,7 @@ struct RepositoryApp: Decodable, Identifiable, Hashable {
         developerName = try? container.decodeIfPresent(String.self, forKey: .developerName)
         subtitle = try? container.decodeIfPresent(String.self, forKey: .subtitle)
         localizedDescription = try? container.decodeIfPresent(String.self, forKey: .localizedDescription)
-        let primaryIcon = try? container.decodeIfPresent(URL.self, forKey: .iconURL)
-        let plainIcon = try? container.decodeIfPresent(URL.self, forKey: .icon)
-        iconURL = (primaryIcon ?? nil) ?? (plainIcon ?? nil)
+        iconURL = Self.lenientURL(container, [.iconURL, .icon, .iconUrl, .iconurl, .imageURL, .image, .logo])
 
         if let parsed = try? container.decode([RepositoryAppVersion].self, forKey: .versions), !parsed.isEmpty {
             versions = parsed
