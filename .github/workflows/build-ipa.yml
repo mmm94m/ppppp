@@ -1,0 +1,92 @@
+name: Build IPA
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Select latest available Xcode 16
+        run: |
+          XCODE_PATH=$(ls -d /Applications/Xcode_16*.app 2>/dev/null | sort -V | tail -1)
+          if [ -z "$XCODE_PATH" ]; then
+            XCODE_PATH=$(ls -d /Applications/Xcode*.app | sort -V | tail -1)
+          fi
+          echo "Using $XCODE_PATH"
+          sudo xcode-select -switch "$XCODE_PATH/Contents/Developer"
+          xcodebuild -version
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Fetch zsign (signing engine)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: ./Scripts/fetch-dependencies.sh
+
+      - name: Generate Xcode project
+        run: xcodegen generate
+
+      - name: Set build number
+        run: /usr/libexec/PlistBuddy -c "Set :CFBundleVersion ${{ github.run_number }}" AshteMobile/Resources/Info.plist
+
+      - name: Read app version
+        run: |
+          VERSION=$(/usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" AshteMobile/Resources/Info.plist)
+          echo "APP_VERSION=$VERSION" >> "$GITHUB_ENV"
+
+      - name: Resolve Swift packages
+        run: xcodebuild -resolvePackageDependencies -project AshteMobile.xcodeproj -scheme AshteMobile
+
+      - name: Build (unsigned, generic iOS device)
+        run: |
+          xcodebuild build \
+            -project AshteMobile.xcodeproj \
+            -scheme AshteMobile \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            DEVELOPMENT_TEAM=""
+
+      - name: Package IPA
+        run: |
+          set -e
+          APP_PATH="build/Build/Products/Release-iphoneos/AshteMobile.app"
+          mkdir -p Payload
+          cp -R "$APP_PATH" Payload/
+          zip -qr AshteMobile-unsigned.ipa Payload
+          rm -rf Payload
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: AshteMobile-unsigned-ipa
+          path: AshteMobile-unsigned.ipa
+          retention-days: 14
+
+      - name: Create release with the .ipa attached
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          TAG="build-${{ github.run_number }}"
+          gh release create "$TAG" AshteMobile-unsigned.ipa \
+            --repo "${{ github.repository }}" \
+            --title "AshteMobile ${{ env.APP_VERSION }} (build ${{ github.run_number }})" \
+            --notes "Unsigned IPA. Sign it with ESign, Sideloadly or AltStore before installing." \
+            --latest
