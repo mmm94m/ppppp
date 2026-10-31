@@ -5,11 +5,13 @@ import Security
 enum InstallServerError: LocalizedError {
     case noIdentity
     case listenerFailed(String)
+    case manifestUnreachable(String)
 
     var errorDescription: String? {
         switch self {
         case .noIdentity: return String(localized: "AshteMobile couldn't prepare its local server certificate.")
         case .listenerFailed(let message): return message
+        case .manifestUnreachable(let message): return message
         }
     }
 }
@@ -138,6 +140,52 @@ final class InstallServer {
                 }
             }
             newListener.start(queue: self.queue)
+        }
+    }
+
+    /// Asks install.ashtemobile.site for the manifest the same way iOS will, so a broken
+    /// certificate / missing endpoint shows a clear message instead of "Waiting for iOS…" forever.
+    func verifyManifestReachable() async throws {
+        guard currentMode == .externalManifest else { return }
+
+        var request = URLRequest(url: manifestSourceURL)
+        request.timeoutInterval = 12
+        request.cachePolicy = .reloadIgnoringLocalCacheData
+
+        let data: Data
+        let response: URLResponse
+        do {
+            (data, response) = try await URLSession(configuration: .ephemeral).data(for: request)
+        } catch let error as URLError {
+            throw InstallServerError.manifestUnreachable(Self.describeManifestError(error))
+        }
+
+        guard let http = response as? HTTPURLResponse else { return }
+        guard http.statusCode == 200 else {
+            throw InstallServerError.manifestUnreachable(
+                String(localized: "install.ashtemobile.site/genPlist answered with HTTP \(http.statusCode). Check that the endpoint exists on your server.")
+            )
+        }
+        let body = String(data: data, encoding: .utf8) ?? ""
+        guard body.contains("<plist") else {
+            throw InstallServerError.manifestUnreachable(
+                String(localized: "install.ashtemobile.site/genPlist did not return an install manifest.")
+            )
+        }
+    }
+
+    private static func describeManifestError(_ error: URLError) -> String {
+        switch error.code {
+        case .serverCertificateHasExpired, .serverCertificateHasBadDate,
+             .serverCertificateUntrusted, .serverCertificateNotYetValid,
+             .secureConnectionFailed, .clientCertificateRejected, .clientCertificateRequired:
+            return String(localized: "The HTTPS certificate of install.ashtemobile.site is expired or invalid, so iOS refuses to install. Renew the certificate on your server.")
+        case .cannotFindHost, .dnsLookupFailed:
+            return String(localized: "install.ashtemobile.site could not be found (DNS). Check the domain record.")
+        case .notConnectedToInternet, .networkConnectionLost, .timedOut, .cannotConnectToHost, .dataNotAllowed:
+            return String(localized: "Can't reach install.ashtemobile.site. Check your internet connection and the server.")
+        default:
+            return error.localizedDescription
         }
     }
 

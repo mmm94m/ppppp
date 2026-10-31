@@ -145,6 +145,7 @@ struct InstallStatusPill: View {
                 mode: .externalManifest,
                 preferLoopback: true
             )
+            try await InstallServer.shared.verifyManifestReachable()
             BackgroundAudioManager.shared.start()
             status = .waitingForSystem
             switch link.presentationStyle {
