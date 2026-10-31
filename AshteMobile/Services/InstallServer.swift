@@ -38,7 +38,7 @@ enum InstallMode {
     var presentationStyle: InstallPresentationStyle {
         switch self {
         case .secureDirect: return .direct
-        case .externalManifest: return .webView
+        case .externalManifest: return .direct
         }
     }
 }

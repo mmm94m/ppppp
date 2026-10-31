@@ -61,6 +61,7 @@ targets:
               - ashtemobile
         UIBackgroundModes:
           - fetch
+          - audio
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.ios94.AshteMobile

@@ -67,6 +67,7 @@ struct InstallStatusPill: View {
         .onDisappear {
             InstallServer.shared.onStatus = nil
             InstallServer.shared.stop()
+            BackgroundAudioManager.shared.stop()
         }
     }
 
@@ -141,8 +142,10 @@ struct InstallStatusPill: View {
                 appName: entry.name,
                 bundleIdentifier: entry.bundleIdentifier,
                 version: entry.displayVersion,
-                mode: .externalManifest
+                mode: .externalManifest,
+                preferLoopback: true
             )
+            BackgroundAudioManager.shared.start()
             status = .waitingForSystem
             switch link.presentationStyle {
             case .direct:
