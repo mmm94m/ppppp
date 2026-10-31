@@ -195,7 +195,7 @@ final class InstallServer {
             return URL(string: "\(scheme)://\(host):\(port)/manifest.plist")!
         case .externalManifest:
             let payloadURL = "\(scheme)://\(host):\(port)/app.ipa"
-            var components = URLComponents(string: "https://api.palera.in/genPlist")!
+            var components = URLComponents(string: "https://install.ashtemobile.site/genPlist")!
             components.queryItems = [
                 URLQueryItem(name: "bundleid", value: bundleIdentifier),
                 URLQueryItem(name: "name", value: appName),

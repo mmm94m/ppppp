@@ -33,7 +33,7 @@ There's no account and no tracking. The app only goes online when you ask it to:
 
 Tap Install on a signed app and a small bar at the bottom shows what's happening: preparing, waiting for you to confirm the iOS prompt, sending the app, installing. It works on Wi-Fi and on mobile data, and you don't need to install a profile or trust anything first.
 
-How it works: iOS installs apps like this through `itms-services://`, but it only accepts the install manifest from a real HTTPS website. So the app runs a tiny server on your phone that hands out the IPA, and only the manifest (bundle ID, version and a link back to your phone) goes through [api.palera.in](https://api.palera.in), a small public service made for this. Your IPA never leaves your phone.
+How it works: iOS installs apps like this through `itms-services://`, but it only accepts the install manifest from a real HTTPS website. So the app runs a tiny server on your phone that hands out the IPA, and only the manifest (bundle ID, version and a link back to your phone) goes through install.ashtemobile.site, the AshteMobile install service. Your IPA never leaves your phone.
 
 If you'd rather use something else to install, Export IPA gives you the signed file for AltStore, Sideloadly or TrollStore.
 
@@ -74,7 +74,7 @@ The fetch script downloads zsign and the OpenSSL headers into `Vendor/`, which i
 ## Known issues
 
 - `.deb` tweaks only work if they're gzip-compressed. For `xz` or `zstd` ones, extract the `.dylib` and import that instead.
-- Installing needs api.palera.in to be reachable. If it's down, use Export IPA for now.
+- Installing needs install.ashtemobile.site to be reachable. If it's down, use Export IPA for now.
 - Revoked certificates are only detected through the profile and expiry date, the app doesn't ask Apple directly.
 - The Share Sheet extension is English only.
 - No special iPad layout yet.
